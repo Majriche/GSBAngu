@@ -1,0 +1,47 @@
+
+<div>
+  <h1>
+    {{titre}}
+  </h1>
+  <BR> <BR>
+</div>
+<div class="container">
+  <div class="col-md-5">
+    <table class="table table-bordered table-striped table-responsive">
+      <thead>
+      <tr>
+        <th style="width: 35%">idFrais</th>
+        <th style="width: 35%">anneeMois</th>
+        <th style="width: 35%">Date Modification</th>
+        <th style="width: 35%">Montant Valdié</th>
+        <th style="width: 35%">Nombre de justificatifs</th>
+        <th style="width: 35%">id Visiteur</th>
+        <th style="width: 35%">Libellé</th>
+        <th style="width: 35%">Modifier</th>
+        <th style="width: 35%">Suprimer</th>
+      </tr>
+
+      </thead>
+      <tr *ngFor="let unFrais of mesFrais">
+        <td>{{unFrais.id_frais}}</td>
+        <td>{{unFrais.anneemois}}</td>
+        <td>{{unFrais.datemodification}}</td>
+        <td>{{unFrais.montantvalide}}</td>
+        <td>{{unFrais.nbjustificatifs}}</td>
+        <td>{{unFrais.id_visiteur}}</td>
+        <td>{{unFrais.lib_etat}}</td>
+
+        <td><button class="btn btn-primary " style="margin: 35%" (click)="modifier(unFrais.id_frais)">
+          <span class="glyphicon glyphicon-pencil"></span> Modifier</button> </td>
+        <td>
+          <button
+            class="btn btn-primary" (click)="supprimer((unFrais))"
+            onclick="javascript:if (confirm('Suppression confirmée ? ')){ } ">
+            <span class="glyphicon glyphicon-remove"></span> Supprimer
+          </button>
+        </td>
+
+      </tr>
+    </table>
+  </div>
+</div>

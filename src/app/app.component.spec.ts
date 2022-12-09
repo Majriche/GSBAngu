@@ -20,16 +20,16 @@ describe('AppComponent', () => {
     expect(app).toBeTruthy();
   });
 
-  it(`should have as title 'GSBAngu'`, () => {
+  it(`should have as title 'monProjetAngular'`, () => {
     const fixture = TestBed.createComponent(AppComponent);
     const app = fixture.componentInstance;
-    expect(app.title).toEqual('GSBAngu');
+    expect(app.title).toEqual('monProjetAngular');
   });
 
   it('should render title', () => {
     const fixture = TestBed.createComponent(AppComponent);
     fixture.detectChanges();
     const compiled = fixture.nativeElement as HTMLElement;
-    expect(compiled.querySelector('.content span')?.textContent).toContain('GSBAngu app is running!');
+    expect(compiled.querySelector('.content span')?.textContent).toContain('monProjetAngular app is running!');
   });
 });
