@@ -1,0 +1,64 @@
+<form name="fajoutfraishfr">
+  <app-navbar>  </app-navbar>
+  <br><br><br>
+  <div>
+    <h1>{{titre}}</h1>
+
+    <br><br>
+  </div>
+
+  <div class="col-md-12 col-sm-12 well well-md well-sm">
+    <div class="form-horizontal">
+      <div class="form-group">
+        <label class="col-md-3 col-sm-3 control-label">Libelle:</label>
+        <div class="col-md-2 col-sm-3">
+          <input type="text" name="date_fraishorsforfait" [(ngModel)]="unFraisHT.lib_fraishorsforfait" class="form-control"
+                 placeholder="Action réalisée" required autofocus>
+        </div>
+      </div>
+      <div class="form-group">
+        <label class="col-md-3 col-sm-3 control-label">Date :</label>
+        <div class="col-md-2 col-sm-3">
+          <input type="date" name="date_fraishorsforfait" [(ngModel)]="unFraisHT.date_fraishorsforfait" class="form-control"
+                 placeholder="Action réalisée" required autofocus>
+        </div>
+      </div>
+      <div class="form-group">
+        <label class="col-md-3 col-sm-3 control-label">Montant :</label>
+        <div class="col-md-2 col-sm-3">
+          <input type="currency" name="date_fraishorsforfait" [(ngModel)]="unFraisHT.montant_fraishorsforfait" class="form-control"
+                 placeholder="Montant engagé" required autofocus>
+        </div>
+      </div>
+
+      <div>
+        <div>
+          <button type="button" (click)="valider()" class="btn btn-primary btn-default">
+            <span class="glyphicon glyphicon-ok-sign"></span> Valider
+          </button>
+        </div>
+        <div>
+          <button type="button" (click)="annuler()" class="btn btn-primary btn-default">
+            <span class="glyphicon glyphicon-ok-sign"></span> Annuler
+          </button>
+        </div>
+      </div>
+
+
+
+
+
+
+
+    </div>
+
+
+
+  </div>
+
+
+
+
+
+
+</form>

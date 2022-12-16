@@ -1,0 +1,63 @@
+<app-navbar></app-navbar>
+<BR> <BR> <BR>
+<div>
+  <h1> {{titre}} </h1>
+  <BR> <BR>
+</div>
+
+<div class="container">
+  <div class="col-md-8">
+    <table class="table table-bordered table-striped table-responsive">
+
+      <thead>
+      <tr>
+        <th >id Frais hors forfait</th>
+        <th >id Frais</th>
+        <th >Date Modification </th>
+        <th > Libelle Frais hors forfait</th>
+        <th>  Frais hors forfait</th>
+        <th>Modifier</th>
+        <th>Supprimer</th>
+      </tr>
+      </thead>
+
+
+      <tr *ngFor="let unFraisHT of mesFraisHT">
+        <td> {{unFraisHT.id_fraishorsforfait}}</td>
+        <td>{{unFraisHT.id_frais}}</td>
+        <td>{{unFraisHT.date_fraishorsforfait}}</td>
+        <td>{{unFraisHT.lib_fraishorsforfait}}</td>
+        <td>{{unFraisHT.montant_fraishorsforfait}}</td>
+        <td>
+          <button class="btn btn-primary" (click)="modifier(unFraisHT.id_fraishorsforfait)" >
+            <span class="glyphicon glyphicon-pencil"></span>Modifier
+          </button>
+        </td>
+
+        <td>
+          <button class="btn btn-primary" (click)="supprimer(unFraisHT.id_fraishorsforfait)"
+          onclick="javascript: if(confirm('suppression confirmée')) { }">
+            <span class="glyphicon glyphicon-pencil"></span>Supprimer
+          </button>
+        </td>
+      </tr>
+
+
+    </table>
+    <br><br>
+
+    <div class="form-group">
+      <div class="col-md-6 col-md-offset-3 col-sm-6 col-sm-offset-3">
+        <button type="button" (click)="ajouterFraisHorsForfait()" class="btn btn-default btn-primary">
+          <span class="glyphicon glyphicon-plus"></span> Ajouter
+        </button>
+        <button type="button"  class="btn btn-default btn-primary" >
+          <span class="glyphicon glyphicon-ok"></span> Valider
+        </button>
+      </div>
+    </div>
+
+
+  </div>
+</div>
+
