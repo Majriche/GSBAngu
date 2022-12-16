@@ -40,10 +40,24 @@ export class FicheFraisHFComponent implements OnInit {
       }
     )
   }
+  valider(){
+    this.unFHF.updateFraisHF(this.unFraisHF).subscribe(
+      ()=>{
+
+      },
+      (error)=>{
+        this.error=error.messages;
+      }
+    )
+    if(this.error!='')
+      alert("Erreur survenue " +this.error);
+    else
+      alert("Modification réussie !")
+    this.unRouteur.navigate(['/accueil']);
+  }
 
   annuler() {
-    alert(this.unFraisHF);
-    alert(this.fraishfid)
+    this.unRouteur.navigate(['/accueil']);
   }
 
 

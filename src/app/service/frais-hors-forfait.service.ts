@@ -44,6 +44,15 @@ export class FraisHorsForfaitService {
     return this.HttpClient.post(this.ClientUrl,JSON.stringify(unFraisHF));
   }
 
+  updateFraisHF(unFraisHF:FraisHT):Observable<any>{
+    this.ClientUrl=ENDPOINT+'api/frais/updateFicheFraisHF';
+    return this.HttpClient.post(this.ClientUrl,JSON.stringify(unFraisHF));
+  }
+
+  validateMontant(idf:number,montant:number){
+    this.ClientUrl=ENDPOINT+'api/frais/validateFraisMontant'
+  }
+
 
 
 

@@ -12,6 +12,7 @@ import {FicheFraisHFComponent} from "./fiche-frais-hf/fiche-frais-hf.component";
 
 const routes: Routes = [
   {path:'', redirectTo: '/connexion',pathMatch:'full'},
+ // {path:'logout',component:}
   {path:'connexion', component: ConnexionComponent},
   {path:'Listefichefrais',component:ListefichefraisComponent},
   {path:'modifierFrais/:id', component:FichefraisComponent},

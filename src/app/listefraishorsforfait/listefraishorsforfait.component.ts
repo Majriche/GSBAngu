@@ -33,6 +33,7 @@ export class ListefraishorsforfaitComponent implements OnInit {
     let test =this.activatedRoute.snapshot.paramMap.get('id');
     this.visiteurid=Number(test);
     this.getListeFraisHorsForfait(this.visiteurid);
+
   }
 
 
@@ -81,6 +82,19 @@ export class ListefraishorsforfaitComponent implements OnInit {
       }
     )
   }
+
+  validerMontantFraisHorsForfait():void {
+    this.unSHF.validateMontant(this.mesFraisHT[0].id_frais,this.montantTotal).subscribe(
+      ()=>{
+        alert("Mise à jour réussie !");
+        this.unRouteur.navigate(['/accueil']);
+      }
+    )
+  }
+
+
+
+
 
 
 }
