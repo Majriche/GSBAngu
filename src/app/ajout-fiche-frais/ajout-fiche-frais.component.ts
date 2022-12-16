@@ -41,7 +41,7 @@ export class AjoutFicheFraisComponent implements OnInit {
     if (this.error!='')
       alert("Erreur survenue : "+this.error)
     else
-      alert("Modification réussie ! ")
+      alert("Ajout réussie ! ")
     this.unRouteur.navigate(['/Listefichefrais']);
 
 

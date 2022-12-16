@@ -7,7 +7,8 @@ import {AjoutFicheFraisComponent} from './ajout-fiche-frais/ajout-fiche-frais.co
 import {NavbarComponent} from "./navbar/navbar.component";
 import {ConnexionComponent} from "./connexion/connexion.component";
 import {ListefraishorsforfaitComponent} from "./listefraishorsforfait/listefraishorsforfait.component";
-
+import {AjouterFraisHFComponent} from "./ajouter-frais-hf/ajouter-frais-hf.component";
+import {FicheFraisHFComponent} from "./fiche-frais-hf/fiche-frais-hf.component";
 
 const routes: Routes = [
   {path:'', redirectTo: '/connexion',pathMatch:'full'},
@@ -17,6 +18,9 @@ const routes: Routes = [
   {path:'ajouterFrais', component:AjoutFicheFraisComponent},
   {path:'accueil', component:NavbarComponent},
   {path:'ListeFicheHorsForfait/:id',component:ListefraishorsforfaitComponent},
+  {path:'AjouterFraisHT/:id',component:AjouterFraisHFComponent},
+  {path:"modifierFraisHF/:id",component:FicheFraisHFComponent},
+
 
 ];
 

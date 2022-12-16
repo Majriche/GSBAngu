@@ -17,6 +17,8 @@ import { ConnexionComponent } from './connexion/connexion.component';
 import { FichefraisComponent } from './fichefrais/fichefrais.component';
 import { AjoutFicheFraisComponent } from './ajout-fiche-frais/ajout-fiche-frais.component';
 import { ListefraishorsforfaitComponent } from './listefraishorsforfait/listefraishorsforfait.component';
+import { AjouterFraisHFComponent } from './ajouter-frais-hf/ajouter-frais-hf.component';
+import { FicheFraisHFComponent } from './fiche-frais-hf/fiche-frais-hf.component';
 //import { FichefraisComponentComponent } from './fichefrais-component/fichefrais-component.component';
 
 @NgModule({
@@ -28,6 +30,8 @@ import { ListefraishorsforfaitComponent } from './listefraishorsforfait/listefra
     FichefraisComponent,
     AjoutFicheFraisComponent,
     ListefraishorsforfaitComponent,
+    AjouterFraisHFComponent,
+    FicheFraisHFComponent,
    // FichefraisComponentComponent,
    // FichefraisComponent,
    // AjoutfichefraisComponent,

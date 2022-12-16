@@ -77,4 +77,10 @@ export class FichefraisComponent implements OnInit {
   }
 
 
+
+  ajouterFraisHT() {
+    this.unRouteur.navigate(['/ListeFicheHorsForfait/'+ this.unFrais.id_frais]);
+  }
+
+
 }
